@@ -43,8 +43,8 @@ final futurePetProvider = FutureProvider(((ref) {
   return fetchAnimal(name);
 }));
 
-/// [fetchData()] method can be return either exception or future data
-///  <br/>__Example : __
+/// [fetchData()] method can be return either exception or future data<br/>
+/// __Example:__
 /// ```
 /// Future<int> fetchData() async {
 ///   await Future.delayed(const Duration(seconds: 2));

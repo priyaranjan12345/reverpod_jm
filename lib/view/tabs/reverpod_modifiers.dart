@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:reverpod_jm/view/class_three/change_notifier_page.dart';
-import 'package:reverpod_jm/view/class_three/state_notifier_provider.dart';
+import 'package:reverpod_jm/view/modifiers/autodispose_modifier.dart';
+import 'package:reverpod_jm/view/modifiers/familyobject_modifier.dart';
+import 'package:reverpod_jm/view/modifiers/familyprimitive_modifier.dart';
 
-class SecondTab extends StatelessWidget {
-  const SecondTab({Key? key}) : super(key: key);
+class ThirdTab extends StatelessWidget {
+  const ThirdTab({Key? key}) : super(key: key);
 
   void navigationTo({required BuildContext context, required Widget page}) {
     Navigator.of(context).push(
@@ -24,18 +25,27 @@ class SecondTab extends StatelessWidget {
               style: ElevatedButton.styleFrom(minimumSize: const Size(40, 50)),
               onPressed: () => navigationTo(
                 context: context,
-                page: const ChangeNotifierPage(),
+                page: const FamiliPrimitiveModifierPage(),
               ),
-              child: const Text('Change Notifier Provider'),
+              child: const Text('Family Primitives'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(minimumSize: const Size(40, 50)),
               onPressed: () => navigationTo(
                 context: context,
-                page: const StateNotifierPage(),
+                page: const FamiliObjectModifierPage(),
               ),
-              child: const Text('State Notifier Provider'),
+              child: const Text('Family Object'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(minimumSize: const Size(40, 50)),
+              onPressed: () => navigationTo(
+                context: context,
+                page: const AutoDisposeModifierPage(),
+              ),
+              child: const Text('Auto-Dispose'),
             ),
           ],
         ),

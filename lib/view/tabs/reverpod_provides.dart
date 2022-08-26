@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:reverpod_jm/view/class_one/future_provider_page.dart';
-import 'package:reverpod_jm/view/class_one/provider_page.dart';
-import 'package:reverpod_jm/view/class_one/state_provider.dart';
-import 'package:reverpod_jm/view/class_one/stream_provider_page.dart';
+import 'package:reverpod_jm/view/providers/future_provider_page.dart';
+import 'package:reverpod_jm/view/providers/provider_page.dart';
+import 'package:reverpod_jm/view/providers/state_provider.dart';
+import 'package:reverpod_jm/view/providers/stream_provider_page.dart';
 
 class FirstTab extends StatelessWidget {
   const FirstTab({Key? key}) : super(key: key);

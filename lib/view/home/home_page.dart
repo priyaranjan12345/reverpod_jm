@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:reverpod_jm/view/tabs/first_tab.dart';
-import 'package:reverpod_jm/view/tabs/second_tab.dart';
-import 'package:reverpod_jm/view/tabs/third_tab.dart';
+import 'package:reverpod_jm/view/tabs/reverpod_provides.dart';
+import 'package:reverpod_jm/view/tabs/reverpod_notifiers.dart';
+import 'package:reverpod_jm/view/tabs/reverpod_modifiers.dart';
 
 final indexProvider = StateProvider<int>(((ref) => 0));
 
@@ -23,6 +23,7 @@ class HomePage extends ConsumerWidget {
       ),
       body: PageView(
         controller: pageController,
+        physics: const NeverScrollableScrollPhysics(),
         children: const [
           FirstTab(),
           SecondTab(),

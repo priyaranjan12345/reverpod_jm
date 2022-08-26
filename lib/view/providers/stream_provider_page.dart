@@ -11,7 +11,7 @@ import 'package:reverpod_jm/widgets/text_widget.dart';
 /// <br/> otherwise state will be there.
 final streamProvider = StreamProvider.autoDispose<int>(
   ((ref) => Stream.periodic(
-        const Duration(seconds: 2),
+        const Duration(milliseconds: 400),
         (counter) => counter,
       )),
 );
